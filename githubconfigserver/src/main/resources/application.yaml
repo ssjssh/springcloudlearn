@@ -1,0 +1,19 @@
+server:
+  port: 8763
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          search-paths: config
+          username: ssjssh
+          password: Assj060213
+          uri: https://github.com/ssjssh/springcloudlearn.git
+      label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
