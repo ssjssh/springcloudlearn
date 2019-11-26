@@ -1,0 +1,11 @@
+#从远程服务器中读取配置文件
+spring:
+  application:
+    name: config-client
+  profiles:
+    active: dev  #远程配置文件名就是[application.name]-[profiles.active].yaml
+
+  cloud:
+    config:
+      uri: http://localhost:8762
+      fail-fast: true #客户端优先判断config server获取是否正常
